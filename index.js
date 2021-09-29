@@ -6,5 +6,7 @@ const PORT = process.env.PUBLIC_PORT
 
 app.use(express.json())
 app.use('/api', api)
-
+app.get('/', (req, res) => {
+	res.send('<h1>Hello from codedamn</h1>')
+})
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`))
