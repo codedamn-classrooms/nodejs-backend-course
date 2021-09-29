@@ -26,6 +26,22 @@ router.post('/books', function (req, res) {
 	} = req.body
 })
 
+router.put('/books/:id', function (req, res) {
+	const { id } = req.params
+	const {
+		title,
+		isbn,
+		pageCount,
+		publishedDate,
+		thumbnailUrl,
+		shortDescription,
+		longDescription,
+		status,
+		authors,
+		categories,
+	} = req.body
+})
+
 router.delete('/books/:id', function (req, res) {
 	// add code
 })
