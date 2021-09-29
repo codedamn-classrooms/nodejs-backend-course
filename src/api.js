@@ -3,6 +3,11 @@ const books = require('./data')
 
 let booksDirectory = books
 
+router.get('/reset', function (req, res) {
+	booksDirectory = books
+	res.send('ok')
+})
+
 router.get('/books', function (req, res) {
 	res.send(booksDirectory)
 })
